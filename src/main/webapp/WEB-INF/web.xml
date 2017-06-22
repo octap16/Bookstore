@@ -1,20 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-<display-name>Bookstore1</display-name>
-  
- 
-    <servlet>
-        <servlet-name>ControllerServlet</servlet-name>
-        <servlet-class>ua.controller.ControllerServlet</servlet-class>
-    </servlet>
- 
-    <servlet-mapping>
-        <servlet-name>ControllerServlet</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
- 
-    <error-page>
-        <exception-type>java.lang.Exception</exception-type>
-        <location>/Error.jsp</location>
-    </error-page>
+  <display-name>Bookstore1</display-name>
+  <servlet>
+    <servlet-name>ListBook</servlet-name>
+    <servlet-class>ua.controller.ListBook</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListBook</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/Error.jsp</location>
+  </error-page>
+  <servlet>
+    <description></description>
+    <display-name>AddBook</display-name>
+    <servlet-name>AddBook</servlet-name>
+    <servlet-class>ua.controller.AddBook</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddBook</servlet-name>
+    <url-pattern>/insert</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteBook</display-name>
+    <servlet-name>DeleteBook</servlet-name>
+    <servlet-class>ua.controller.DeleteBook</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteBook</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateBook</display-name>
+    <servlet-name>UpdateBook</servlet-name>
+    <servlet-class>ua.controller.UpdateBook</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateBook</servlet-name>
+    <url-pattern>/update</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ShowNewForm</display-name>
+    <servlet-name>ShowNewForm</servlet-name>
+    <servlet-class>ua.controller.ShowNewForm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowNewForm</servlet-name>
+    <url-pattern>/new</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ShowEditForm</display-name>
+    <servlet-name>ShowEditForm</servlet-name>
+    <servlet-class>ua.controller.ShowEditForm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowEditForm</servlet-name>
+    <url-pattern>/edit</url-pattern>
+  </servlet-mapping>
 </web-app>
